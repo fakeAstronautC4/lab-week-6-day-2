@@ -2,15 +2,19 @@ const express = require('express')
 const path = require('path')
 
 
-// var Rollbar = require('rollbar')
-// var rollbar = new Rollbar({
-//   accessToken: '767194a84a3344ad8ee870bebb34ef15',
-//   captureUncaught: true,
-//   captureUnhandledRejections: true,
-// })
+// include and initialize the rollbar library with your access token
+var Rollbar = require('rollbar')
+var rollbar = new Rollbar({
+  accessToken: '8e36529e843d4cca94ab9c93f7e7b284',
+  captureUncaught: true,
+  captureUnhandledRejections: true,
+})
 
 // record a generic message and send it to Rollbar
-// rollbar.log('Hello world!')
+rollbar.log('Hello world!')
+rollbar.critical('Critical err exxe!!')
+rollbar.warning('Careful!!!')
+rollbar.info('doing great!')
 
 const app = express()
 
