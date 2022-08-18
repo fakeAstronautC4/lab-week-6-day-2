@@ -18,6 +18,12 @@ rollbar.info('doing great!')
 
 const app = express()
 
+try {
+  nonExistentFunction();
+} catch (error) {
+  rollbar.critical(error);
+}
+
 app.get('/',function(req,res) {
   res.sendFile(path.join(__dirname, '../client/index.html'));
 });
