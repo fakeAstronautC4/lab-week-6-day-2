@@ -1,0 +1,23 @@
+.hide{
+    display: none;
+}
+h1{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: inset;
+}
+#lcl{
+    display: none;
+}
+.h444:hover + #lcl{
+    display: block;
+    color: black;
+    
+}
+.h444:hover + .hide{
+    display: block;
+    color: black;
+}
+.h444{
+    padding: 10px;
+}
